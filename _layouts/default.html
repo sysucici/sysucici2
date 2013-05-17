@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ site.title }}</title>
+	{% include meta-icon-link.md %}
+</head>
+<body>
+ <div id="container">
+      <div class="inner">
+
+{% include header.md %}
+			<div section="body-content">
+				{{ content }}
+			</div>
+{% include footer.md %}
+<script type="text/javascript" src="/javascripts/main.js"></script>
+     </div>
+  </div>
+</body>
+</html>
