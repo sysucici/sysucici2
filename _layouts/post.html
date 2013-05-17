@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ page.title }}- {{ site.title }}</title>
+	{% include meta-icon-link.md %}
+</head>
+<body>
+<div id="container">
+      <div class="inner">
+      
+{% include header.md %}
+					<h2>{{ page.title }}</h2>
+
+				{{ content }}
+
+				<ol class="pager">
+					{% if page.previous %}
+					<li class="previous"><a href="{{ page.previous.url }}">上一篇：{{ page.previous.title }}</a></li>
+					{% else %}
+					<li class="previous disabled">
+					<a href="#">上一篇：没有了</a>
+					</li>
+					{% endif %}
+					{% if page.next %}
+					<li class="next">
+					<a href="{{ page.next.url }}">下一篇：{{ page.next.title }}</a>
+					</li>
+					{% else %}
+					<li class="next disabled">
+					<a href="#">下一篇：没有了</a>
+					</li>
+					{% endif %}
+				</ol>
+	{% include footer.md %}
+   </div>
+</div>
+<script type="text/javascript" src="/javascripts/main.js"></script>
+</body>
+</html>
